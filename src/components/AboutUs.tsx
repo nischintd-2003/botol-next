@@ -1,12 +1,13 @@
 import { ABOUTUS, BUTTON } from '@/config/constants'
-import BG from '../../public/aboutUsBg.svg'
-import BlurCard from './BlurCard'
+import BackgroundBG from '../../public/aboutUsBg.svg'
+import BlurCard from './ui/BlurCard'
+import CommonBtn from './ui/CommonBtn'
 
-const Aboutus = () => {
+const AboutUs = () => {
   return (
     <div
       className="bg-cover bg-center grid grid-cols-1 lg:grid-cols-2 text-white gap-12 lg:gap-36 px-6 sm:px-12 lg:ps-50 lg:pe-30 py-12 lg:py-30"
-      style={{ backgroundImage: `url(${BG})` }}
+      style={{ backgroundImage: `url(${BackgroundBG})` }}
     >
       <div className="left">
         <h1 className="text-3xl sm:text-4xl lg:text-[60px] font-semibold">{ABOUTUS.TITLE}</h1>
@@ -14,9 +15,7 @@ const Aboutus = () => {
           {ABOUTUS.DESCRIPTION}
         </h3>
         <p className="text-base sm:text-lg lg:text-[20px] leading-relaxed">{ABOUTUS.CONTENT}</p>
-        <button className="bg-gradient-to-r from-[#00D1FF] to-[#1A83FF] rounded-full text-base sm:text-lg lg:text-[20px] font-semibold px-6 sm:px-8 lg:px-[36px] py-[7px] my-6 text-white">
-          {BUTTON.LEARN_MORE}
-        </button>
+        <CommonBtn text={BUTTON.LEARN_MORE} />
       </div>
 
       <div className="right flex flex-col gap-6 sm:gap-8 lg:gap-10 ms-0 lg:ms-10 me-0 lg:me-60">
@@ -28,4 +27,4 @@ const Aboutus = () => {
   )
 }
 
-export default Aboutus
+export default AboutUs

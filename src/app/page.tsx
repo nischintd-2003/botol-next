@@ -1,7 +1,11 @@
+import AboutUs from '@/components/AboutUs'
+import PremiumProducts from '@/components/PremiumProducts'
+
 export default function Home() {
   return (
     <main>
-      <h1>Botol</h1>
+      <PremiumProducts />
+      <AboutUs />
     </main>
   )
 }

@@ -1,5 +1,6 @@
 export const BUTTON = {
   LEARN_MORE: 'LEARN MORE',
+  VIEW_MORE: 'VIEW MORE',
 }
 
 export const ABOUTUS = {
@@ -13,4 +14,10 @@ export const ABOUTUS = {
     'Variation In Sizes, Styles, And Material',
     'Made In India To Serve Authenticity',
   ],
+}
+
+export const PREMIUMPRODUCTS = {
+  TITLE: 'Hydration Essentials',
+  DESCRIPTION: 'Discover Our Range of Premium Water Bottles',
+  PRODUCTS: ['Rainbow 600', 'Rio 650', 'Big Bull 1300', 'Rome 600', 'Rainbow 600', 'Sweetie 200'],
 }

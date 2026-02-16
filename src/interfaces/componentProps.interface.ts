@@ -14,3 +14,7 @@ export interface ProductProps {
   text: string
   image: StaticImageData
 }
+
+export interface CommonBtnProps {
+  text: string
+}
