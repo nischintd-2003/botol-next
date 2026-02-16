@@ -21,3 +21,8 @@ export const PREMIUMPRODUCTS = {
   DESCRIPTION: 'Discover Our Range of Premium Water Bottles',
   PRODUCTS: ['Rainbow 600', 'Rio 650', 'Big Bull 1300', 'Rome 600', 'Rainbow 600', 'Sweetie 200'],
 }
+
+export const FOOTER = {
+  FOOT_LINK_A1: ['Shop', 'Contact Us', 'About', 'Journal', 'Custom'],
+  FOOT_LINK_A2: ["FAQ's", 'Returns', 'Ordering', 'Shipping', 'Personalization Policies'],
+}
