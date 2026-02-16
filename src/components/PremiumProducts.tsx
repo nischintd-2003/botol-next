@@ -13,8 +13,8 @@ const PremiumProducts = () => {
   const productImages: StaticImageData[] = [RB600, RI650, BB1300, RM600, RB600, SW200]
 
   return (
-    <div className="w-full px-6 sm:px-10 lg:px-50 py-6">
-      <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center gap-4 px-2 lg:px-10">
+    <div className="w-full px-6 sm:px-10 lg:px-50 py-6 my-20">
+      <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center gap-4 ">
         <div>
           <h1 className="text-3xl sm:text-4xl lg:text-[60px] font-semibold leading-tight text-center md:text-left">
             {PREMIUMPRODUCTS.TITLE}
