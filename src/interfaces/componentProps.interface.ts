@@ -9,3 +9,8 @@ export interface VarietyProps {
   text: string
   icon: StaticImageData
 }
+
+export interface ProductProps {
+  text: string
+  image: StaticImageData
+}
