@@ -13,7 +13,9 @@ const AboutUs = () => {
         <h3 className="text-lg sm:text-xl lg:text-[24px] font-medium my-3">
           {ABOUTUS.DESCRIPTION}
         </h3>
-        <p className="text-base sm:text-lg lg:text-[20px] leading-relaxed">{ABOUTUS.CONTENT}</p>
+        <p className="text-base sm:text-lg lg:text-[20px]/8 my-7 leading-relaxed">
+          {ABOUTUS.CONTENT}
+        </p>
         <CommonBtn text={BUTTON.LEARN_MORE} />
       </div>
 
