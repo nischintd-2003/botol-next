@@ -1,5 +1,4 @@
 import { ABOUTUS, BUTTON } from '@/config/constants'
-import BackgroundBG from '../../public/aboutUsBg.svg'
 import BlurCard from './ui/BlurCard'
 import CommonBtn from './ui/CommonBtn'
 
@@ -7,7 +6,7 @@ const AboutUs = () => {
   return (
     <div
       className="bg-cover bg-center grid grid-cols-1 lg:grid-cols-2 text-white gap-12 lg:gap-36 px-6 sm:px-12 lg:ps-50 lg:pe-30 py-12 lg:py-30"
-      style={{ backgroundImage: `url(${BackgroundBG})` }}
+      style={{ backgroundImage: `url(/aboutUsBg.svg)` }}
     >
       <div className="left">
         <h1 className="text-3xl sm:text-4xl lg:text-[60px] font-semibold">{ABOUTUS.TITLE}</h1>
