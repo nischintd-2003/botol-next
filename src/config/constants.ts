@@ -26,3 +26,26 @@ export const FOOTER = {
   FOOT_LINK_A1: ['Shop', 'Contact Us', 'About', 'Journal', 'Custom'],
   FOOT_LINK_A2: ["FAQ's", 'Returns', 'Ordering', 'Shipping', 'Personalization Policies'],
 }
+
+export const fAQDATA = [
+  {
+    question: 'Where can I watch?',
+    answer:
+      'Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum nulla cras porttitor titore ismod nulla.',
+  },
+  {
+    question: 'Where can I watch?',
+    answer:
+      'Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum nulla cras porttitor titore ismod nulla.',
+  },
+  {
+    question: 'Where can I watch?',
+    answer:
+      'Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum nulla cras porttitor titore ismod nulla.',
+  },
+  {
+    question: 'Where can I watch?',
+    answer:
+      'Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum nulla cras porttitor titore ismod nulla.',
+  },
+]

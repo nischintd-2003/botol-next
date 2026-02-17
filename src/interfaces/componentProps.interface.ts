@@ -18,3 +18,11 @@ export interface ProductProps {
 export interface CommonBtnProps {
   text: string
 }
+
+export interface FAQItemProps {
+  index: number
+  question: string
+  answer: string
+  isOpen: boolean
+  onToggle: () => void
+}
