@@ -1,6 +1,7 @@
 export const BUTTON = {
   LEARN_MORE: 'LEARN MORE',
   VIEW_MORE: 'VIEW MORE',
+  SUBMIT: 'SUBMIT',
 }
 
 export const ABOUTUS = {
@@ -49,3 +50,14 @@ export const fAQDATA = [
       'Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum nulla cras porttitor titore ismod nulla.',
   },
 ]
+
+export const CONTACTS = {
+  TITLE: 'Get in touch with us',
+  DESCRIPTION_PT1: "Hi, I'm Amanda. Need help? Use the form below or email",
+  DESCRIPTION_PT2: 'me at hello@xyz.com',
+  LABEL: {
+    NAME: 'Name',
+    EMAIL: 'Email',
+    MESSAGE: 'Message',
+  },
+}
