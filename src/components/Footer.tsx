@@ -5,7 +5,7 @@ import { FOOTER } from '@/config/constants'
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#201F1F] p-8">
+      <div className="bg-[#201F1F] p-8 mt-20">
         <div className="flex flex-col md:flex-row justify-between w-full md:px-28 gap-6 md:gap-0">
           <div className="flex justify-center md:justify-start">
             <Image src={Logo} alt="Logo" className="h-[50px] md:h-[60px] w-auto" />

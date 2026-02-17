@@ -22,16 +22,16 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
 
         <button className="mt-2 md:mt-0 text-gray-400 focus:outline-none self-end md:self-auto">
           {isOpen ? (
-            <div className="p-2 md:p-3 rounded-full bg-gradient-to-r from-[#4DFBFB] to-[#788EFF] text-white font-semibold">
+            <div className="p-2 md:p-3 rounded-full bg-gradient-to-r from-[#00D1FF] to-[#1A83FF] text-white font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={3}
+                strokeWidth={2}
                 stroke="currentColor"
                 className="w-4 h-4 md:w-5 md:h-5"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="square" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
           ) : (
@@ -40,11 +40,11 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={3}
+                strokeWidth={2}
                 stroke="currentColor"
                 className="w-4 h-4 md:w-5 md:h-5"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+                <path strokeLinecap="square" strokeLinejoin="round" d="M12 6v12m6-6H6" />
               </svg>
             </div>
           )}
@@ -52,8 +52,8 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
       </div>
 
       {isOpen && (
-        <div className="px-2 md:px-6 pb-6 text-gray-900">
-          <p className="pl-4 md:pl-28 text-base md:text-[20px]">{answer}</p>
+        <div className="px-2 md:px-6 pb-6 text-gray-600">
+          <p className="pl-4 md:pl-32 text-base md:text-[20px]">{answer}</p>
         </div>
       )}
     </div>
