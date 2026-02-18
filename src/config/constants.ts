@@ -61,3 +61,10 @@ export const CONTACTS = {
     MESSAGE: 'Message',
   },
 }
+
+export const BOTTLE_VARITIES = [
+  'Vacuum Bottles',
+  'Fridge Bottles & Jugs',
+  'Borosilicate Bottles',
+  'Kettles',
+]
