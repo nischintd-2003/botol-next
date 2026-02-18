@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
       </nav>
 
-      <div className="mt-24">
+      <div className="mt-24 h-screen">
         <div className="flex flex-col items-center mt-8">
           <motion.div
             initial={{ opacity: 0, y: -50, scale: 0 }}
@@ -55,10 +55,36 @@ const Hero = () => {
               {FRONT_SECTION.DESCRIPTION_2}
             </div>
           </motion.div>
+          <div className="flex justify-evenly w-screen">
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: -220, y: 50 }}
+              animate={{ opacity: 1, scale: 1.4 }}
+              transition={{ duration: 3, delay: 1 }}
+              className="hidden lg:block"
+            >
+              <Image src={RightBotol} alt="Botol Left" priority />
+            </motion.div>
+            <motion.button
+              className="bg-gradient-to-r from-[#00D1FF] to-[#1A83FF] text-white text-xl mt-8 px-10 py-2 rounded-3xl h-12"
+              initial={{ opacity: 0, y: 65 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2, delay: 2 }}
+            >
+              {BUTTON.INQUIRY_NOW}
+            </motion.button>
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: 220, y: 50 }}
+              animate={{ opacity: 1, scale: 1.4 }}
+              transition={{ duration: 3, delay: 1 }}
+              className="hidden lg:block"
+            >
+              <Image src={LeftBotol} alt="Botol Right" priority />
+            </motion.div>
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2  w-full">
         <div className="bg-[#E6D4CB]">
           <Image src={BottleHand} alt="BottleHand" className="w-full h-full" />
         </div>
