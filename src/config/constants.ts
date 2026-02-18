@@ -71,3 +71,10 @@ export const BOTTLE_VARITIES = [
 ]
 
 export const NAV_LINKS = ['Shop', 'Contact Us', 'About', 'Journal', 'Custom']
+
+export const FRONT_SECTION = {
+  TITLE_1: 'The Ultimate Companion',
+  TITLE_2: 'for Hydration',
+  DESCRIPTION_1: 'We believe in the power of hydration.',
+  DESCRIPTION_2: 'Our mission is simple yet vital',
+}

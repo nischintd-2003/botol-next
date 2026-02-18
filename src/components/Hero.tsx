@@ -7,8 +7,11 @@ import variety3 from '../../public/botol-variety/Borosilicate Bottles_v3.svg'
 import variety4 from '../../public/botol-variety/wine_v4.svg'
 import Variety from './ui/Variety'
 import Logo from '../../public/logo/logo_header.svg'
-import { BOTTLE_VARITIES, BUTTON, NAV_LINKS } from '@/config/constants'
+import { BOTTLE_VARITIES, BUTTON, FRONT_SECTION, NAV_LINKS } from '@/config/constants'
 import CommonBtn from './ui/CommonBtn'
+import RightBotol from '../../public/botol/bottle_right.svg'
+import LeftBotol from '../../public/botol/bottle_left.svg'
+import { motion } from 'motion/react'
 
 const Hero = () => {
   const varieties: string[] = BOTTLE_VARITIES
@@ -33,6 +36,27 @@ const Hero = () => {
           <CommonBtn text={BUTTON.INQUIRY_NOW} />
         </div>
       </nav>
+
+      <div className="mt-24">
+        <div className="flex flex-col items-center mt-8">
+          <motion.div
+            initial={{ opacity: 0, y: -50, scale: 0 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 3, delay: 1 }}
+          >
+            <div className="text-6xl lg:text-[96px] font-medium text-center leading-tight">
+              {FRONT_SECTION.TITLE_1}
+              <br />
+              {FRONT_SECTION.TITLE_2}
+            </div>
+            <div className="text-[30px] text-center mt-3">
+              {FRONT_SECTION.DESCRIPTION_1}
+              <br />
+              {FRONT_SECTION.DESCRIPTION_2}
+            </div>
+          </motion.div>
+        </div>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 w-full">
         <div className="bg-[#E6D4CB]">
