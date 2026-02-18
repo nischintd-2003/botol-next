@@ -2,6 +2,7 @@ export const BUTTON = {
   LEARN_MORE: 'LEARN MORE',
   VIEW_MORE: 'VIEW MORE',
   SUBMIT: 'SUBMIT',
+  INQUIRY_NOW: 'INQUIRY NOW',
 }
 
 export const ABOUTUS = {
@@ -68,3 +69,5 @@ export const BOTTLE_VARITIES = [
   'Borosilicate Bottles',
   'Kettles',
 ]
+
+export const NAV_LINKS = ['Shop', 'Contact Us', 'About', 'Journal', 'Custom']
