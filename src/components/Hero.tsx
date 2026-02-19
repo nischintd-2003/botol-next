@@ -19,7 +19,6 @@ const Hero = () => {
   const { scrollYProgress } = useScroll({})
   const varieties: string[] = BOTTLE_VARITIES
   const varieties_icon = [variety1, variety2, variety3, variety4]
-
   const bottleTopY = useTransform(scrollYProgress, [0, 0.185], [-50, 1200])
   const bottleBottomY = useTransform(scrollYProgress, [0, 0.185], [-350, 400])
 
@@ -69,13 +68,13 @@ const Hero = () => {
       </div>
       <motion.div
         className="circle bg-gradient-to-b from-[#4DFBFB] to-[#788EFF] h-[600px] w-[600px] rounded-full p-2 absolute top-45"
-        initial={{ scale: 0.6 }}
+        initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, duration: 2 }}
       >
         <motion.div
           className="bg-white rounded-full h-[582px]"
-          initial={{ scale: 0.97 }}
+          initial={{ scale: 0.98 }}
           animate={{ scale: 1 }}
           transition={{ delay: 1, duration: 2 }}
         ></motion.div>
