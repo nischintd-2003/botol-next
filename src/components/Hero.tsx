@@ -36,8 +36,13 @@ const Hero = () => {
           <CommonBtn text={BUTTON.INQUIRY_NOW} />
         </div>
       </nav>
-
-      <div className="mt-24 h-screen">
+      <motion.div
+        className="circle bg-gradient-to-b from-[#00D1FF] to-[#1A83FF] h-[600px] w-[600px] rounded-full p-2 absolute top-40"
+        initial={{ scale: 0.6 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 1, duration: 2 }}
+      ></motion.div>
+      <div className="mt-24 z-40 h-screen">
         <div className="flex flex-col items-center mt-8">
           <motion.div
             initial={{ opacity: 0, y: -50, scale: 0 }}
