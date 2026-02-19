@@ -41,7 +41,14 @@ const Hero = () => {
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, duration: 2 }}
-      ></motion.div>
+      >
+        <motion.div
+          className="bg-white rounded-full h-[582px]"
+          initial={{ scale: 0.97 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 1, duration: 2 }}
+        ></motion.div>
+      </motion.div>
       <div className="mt-24 z-40 h-screen">
         <div className="flex flex-col items-center mt-8">
           <motion.div
