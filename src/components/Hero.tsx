@@ -47,7 +47,7 @@ const Hero = () => {
         <motion.div
           className="bottle-top"
           initial={{ y: 200 }}
-          animate={{ y: -40 }}
+          animate={{ y: -50 }}
           transition={{ duration: 2.5, delay: 1 }}
           style={{ y: bottleTopY }}
         >
