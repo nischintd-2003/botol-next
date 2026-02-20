@@ -24,6 +24,7 @@ const Hero = () => {
 
   return (
     <div className="flex flex-col justify-center items-center mt-5">
+      {/* NAVBAR */}
       <nav className="lg:h-[80px] flex justify-center lg:justify-between w-full lg:px-24">
         <div className="left">
           <Image src={Logo} alt="Logo" className="my-5 w-auto h-auto" priority />
@@ -41,6 +42,7 @@ const Hero = () => {
           <CommonBtn text={BUTTON.INQUIRY_NOW} />
         </div>
       </nav>
+      {/* BOTTLE COMPONENTS */}
       <div className="absolute inset-0 top-40 z-50 -translate-y-36 lg:-translate-y-0">
         <motion.div
           className="bottle-top"
@@ -66,6 +68,7 @@ const Hero = () => {
           />
         </motion.div>
       </div>
+      {/* BACKGROUND HOLLOW CIRCLE EFFECT */}
       <motion.div
         className="circle bg-gradient-to-b from-[#4DFBFB] to-[#788EFF] h-[600px] w-[600px] rounded-full p-2 absolute top-45"
         initial={{ scale: 0.8 }}
@@ -79,6 +82,7 @@ const Hero = () => {
           transition={{ delay: 1, duration: 2 }}
         ></motion.div>
       </motion.div>
+      {/* TITLE AND DESCRIPTION */}
       <div className="mt-46 z-40">
         <div className="flex flex-col items-center">
           <motion.div
@@ -125,7 +129,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
+      {/* BOTOL VARIETY SECTION */}
       <div className="grid grid-cols-1 lg:grid-cols-2 mt-72 w-full">
         <div className="bg-[#E6D4CB]">
           <Image src={BottleHand} alt="BottleHand" className="w-full h-full" />
