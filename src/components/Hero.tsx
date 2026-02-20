@@ -70,9 +70,9 @@ const Hero = () => {
       </div>
       {/* BACKGROUND HOLLOW CIRCLE EFFECT */}
       <motion.div
-        className="circle bg-gradient-to-b from-[#4DFBFB] to-[#788EFF] h-[600px] w-[600px] rounded-full p-2 absolute top-45"
+        className="circle bg-gradient-to-b from-[#4DFBFB] to-[#788EFF] h-[600px] w-[600px] rounded-full p-2 absolute top-50"
         initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
+        animate={{ scale: 1.1 }}
         transition={{ delay: 1, duration: 2 }}
       >
         <motion.div
