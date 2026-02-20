@@ -46,7 +46,7 @@ const Hero = () => {
       <div className="absolute inset-0 top-40 z-50 -translate-y-36 lg:-translate-y-0">
         <motion.div
           className="bottle-top"
-          initial={{ y: 200 }}
+          initial={{ y: 220 }}
           animate={{ y: -50 }}
           transition={{ duration: 2.5, delay: 1 }}
           style={{ y: bottleTopY }}
@@ -55,7 +55,7 @@ const Hero = () => {
         </motion.div>
         <motion.div
           className="bottle-bottom"
-          initial={{ y: -600 }}
+          initial={{ y: -580 }}
           animate={{ y: -350 }}
           transition={{ duration: 2.5, delay: 1 }}
           style={{ y: bottleBottomY }}
