@@ -19,8 +19,8 @@ const Hero = () => {
   const { scrollYProgress } = useScroll({})
   const varieties: string[] = BOTTLE_VARITIES
   const varieties_icon = [variety1, variety2, variety3, variety4]
-  const bottleTopY = useTransform(scrollYProgress, [0, 0.185], [-50, 1200])
-  const bottleBottomY = useTransform(scrollYProgress, [0, 0.185], [-350, 400])
+  const bottleTopY = useTransform(scrollYProgress, [0, 0.185], [-50, 1100])
+  const bottleBottomY = useTransform(scrollYProgress, [0, 0.185], [-350, 300])
 
   return (
     <div className="flex flex-col justify-center items-center mt-5">
