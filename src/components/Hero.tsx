@@ -19,8 +19,8 @@ const Hero = () => {
   const { scrollYProgress } = useScroll({})
   const varieties: string[] = BOTTLE_VARITIES
   const varieties_icon = [variety1, variety2, variety3, variety4]
-  const bottleTopY = useTransform(scrollYProgress, [0, 0.185], [-50, 1100])
-  const bottleBottomY = useTransform(scrollYProgress, [0, 0.185], [-350, 300])
+  const bottleTopY = useTransform(scrollYProgress, [0, 0.185], [-50, 1200])
+  const bottleBottomY = useTransform(scrollYProgress, [0, 0.185], [-350, 400])
 
   return (
     <div className="flex flex-col justify-center items-center mt-5">
@@ -135,7 +135,7 @@ const Hero = () => {
           <Image src={BottleHand} alt="BottleHand" className="w-full h-full" priority />
         </div>
         <div className="bg-[#20292C]">
-          <div className="flex flex-col justify-center items-center gap-4 lg:gap-14">
+          <div className="flex flex-col justify-center items-center gap-4 lg:gap-14 h-screen">
             {varieties.map((variety: string, index: number) => (
               <Variety key={index} text={variety} icon={varieties_icon[index]} />
             ))}
