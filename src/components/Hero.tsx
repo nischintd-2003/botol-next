@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="py-3 mr-15">
             {NAV_LINKS.map((item: string) => {
               return (
-                <button key={item} className="mx-8 text-[20px]">
+                <button name="navlinks" id="navlinks" key={item} className="mx-8 text-[20px]">
                   {item}
                 </button>
               )
@@ -132,7 +132,7 @@ const Hero = () => {
       {/* BOTOL VARIETY SECTION */}
       <div className="grid grid-cols-1 lg:grid-cols-2 mt-72 w-full">
         <div className="bg-[#E6D4CB]">
-          <Image src={BottleHand} alt="BottleHand" className="w-full h-full" />
+          <Image src={BottleHand} alt="BottleHand" className="w-full h-full" priority />
         </div>
         <div className="bg-[#20292C]">
           <div className="flex flex-col justify-center items-center gap-4 lg:gap-14 h-screen">

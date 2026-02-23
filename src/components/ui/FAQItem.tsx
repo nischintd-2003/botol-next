@@ -20,7 +20,11 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
           </span>
         </div>
 
-        <button className="mt-2 md:mt-0 text-gray-400 focus:outline-none self-end md:self-auto">
+        <button
+          name="faqAction-btn"
+          id="faqAction-btn"
+          className="mt-2 md:mt-0 text-gray-400 focus:outline-none self-end md:self-auto"
+        >
           {isOpen ? (
             <div className="p-2 md:p-3 rounded-full bg-gradient-to-r from-[#00D1FF] to-[#1A83FF] text-white font-semibold">
               <svg
