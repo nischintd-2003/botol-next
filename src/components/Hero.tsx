@@ -45,27 +45,34 @@ const Hero = () => {
       {/* BOTTLE COMPONENTS */}
       <div className="absolute inset-0 top-40 z-50 -translate-y-36 lg:-translate-y-0">
         <motion.div
-          className="bottle-top"
-          initial={{ y: 220 }}
-          animate={{ y: -50 }}
+          className="bottle-top-entrance"
+          initial={{ y: 270 }}
+          animate={{ y: 0 }}
           transition={{ duration: 2.5, delay: 1 }}
-          style={{ y: bottleTopY }}
         >
-          <Image src={BotolCap} alt="Botol Cap" className="m-auto scale-50 lg:scale-100" priority />
+          <motion.div className="bottle-top-scroll" style={{ y: bottleTopY }}>
+            <Image
+              src={BotolCap}
+              alt="Botol Cap"
+              className="m-auto scale-50 lg:scale-100"
+              priority
+            />
+          </motion.div>
         </motion.div>
         <motion.div
-          className="bottle-bottom"
-          initial={{ y: -580 }}
-          animate={{ y: -350 }}
+          className="bottle-bottom-entrance"
+          initial={{ y: -230 }}
+          animate={{ y: 0 }}
           transition={{ duration: 2.5, delay: 1 }}
-          style={{ y: bottleBottomY }}
         >
-          <Image
-            src={BotolContainer}
-            alt="Bottle Bottom"
-            className="m-auto scale-50 lg:scale-100"
-            priority
-          />
+          <motion.div className="bottle-bottom-scroll" style={{ y: bottleBottomY }}>
+            <Image
+              src={BotolContainer}
+              alt="Bottle Bottom"
+              className="m-auto scale-50 lg:scale-100"
+              priority
+            />
+          </motion.div>
         </motion.div>
       </div>
       {/* BACKGROUND HOLLOW CIRCLE EFFECT */}

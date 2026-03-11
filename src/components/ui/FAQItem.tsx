@@ -28,6 +28,7 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
           {isOpen ? (
             <div className="p-2 md:p-3 rounded-full bg-gradient-to-r from-[#00D1FF] to-[#1A83FF] text-white font-semibold">
               <svg
+                name="closeButton"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -41,6 +42,7 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
           ) : (
             <div className="p-2 md:p-3 bg-gray-100 rounded-full text-black">
               <svg
+                name="open-button"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
