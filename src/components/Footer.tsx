@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Logo from '../../public/logo/logo_footer.svg'
-import { FOOTER } from '@/config/constants'
+import { FOOTER, SOCIAL_ICONS_DATA } from '@/config/constants'
 
 const Footer = () => {
   return (
@@ -24,16 +24,22 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between w-full md:px-28 items-center gap-6 md:gap-0 mt-12">
           <div className="flex gap-4">
-            {[{ icon: 'fa-facebook-f' }, { icon: 'fa-instagram' }, { icon: 'fa-x-twitter' }].map(
-              (social, idx) => (
-                <div
-                  key={idx}
-                  className="w-[34.5px] h-[34.5px] text-white bg-[#535353] flex justify-center items-center rounded-full hover:bg-[#4DFBFB] transition"
-                >
-                  <i className={`fa-brands ${social.icon}`}></i>
-                </div>
-              )
-            )}
+            {SOCIAL_ICONS_DATA.map((social) => (
+              <a
+                key={social.name}
+                href="#"
+                aria-label={social.name}
+                className="w-9 h-9 text-white bg-[#535353] flex justify-center items-center rounded-full hover:bg-[#4DFBFB] transition hover:text-[#201F1F]"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4 md:w-5 md:h-5">
+                  <path
+                    d={social.path}
+                    fillRule={social.clipRule === 'evenodd' ? 'evenodd' : 'nonzero'}
+                    clipRule={social.clipRule}
+                  />
+                </svg>
+              </a>
+            ))}
           </div>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 text-center">
