@@ -1,47 +1,25 @@
 'use client'
 import Image from 'next/image'
-import BottleHand from '../../public/botol-variety/botol_hand.svg'
-import variety1 from '../../public/botol-variety/v1.svg'
-import variety2 from '../../public/botol-variety/v2.svg'
-import variety3 from '../../public/botol-variety/v3.svg'
-import variety4 from '../../public/botol-variety/v4.svg'
-import Variety from './ui/Variety'
-import Logo from '../../public/logo/logo_header.svg'
-import { BOTTLE_VARITIES, BUTTON, FRONT_SECTION, NAV_LINKS } from '@/config/constants'
-import CommonBtn from './ui/CommonBtn'
+import { BUTTON, FRONT_SECTION } from '@/config/constants'
 import RightBottle from '../../public/botol/bottle_right.svg'
 import LeftBottle from '../../public/botol/bottle_left.svg'
 import { motion, useScroll, useTransform } from 'motion/react'
 import BottleCap from '../../public/botol/Bottle-Cap.svg'
 import BottleContainer from '../../public/botol/Bottle-down.svg'
+import { useRef } from 'react'
 
 const Hero = () => {
-  const { scrollYProgress } = useScroll({})
-  const varieties: string[] = BOTTLE_VARITIES
-  const varietyIcons = [variety1, variety2, variety3, variety4]
-  const bottleTopY = useTransform(scrollYProgress, [0, 0.185], [-50, 1100])
-  const bottleBottomY = useTransform(scrollYProgress, [0, 0.185], [-350, 300])
+  const containerRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end start'],
+  })
+
+  const bottleTopY = useTransform(scrollYProgress, [0, 1], [-50, 1100])
+  const bottleBottomY = useTransform(scrollYProgress, [0, 1], [-350, 300])
 
   return (
-    <div className="flex flex-col justify-center items-center mt-5">
-      {/* NAVBAR */}
-      <nav className="lg:h-[80px] flex justify-center lg:justify-between w-full lg:px-24">
-        <div className="left">
-          <Image src={Logo} alt="Logo" className="my-5 w-auto h-auto" priority />
-        </div>
-        <div className="right flex py-4">
-          <div className="py-3 mr-15">
-            {NAV_LINKS.map((item: string) => {
-              return (
-                <button key={item} className="mx-8 text-[20px]">
-                  {item}
-                </button>
-              )
-            })}
-          </div>
-          <CommonBtn text={BUTTON.INQUIRY_NOW} />
-        </div>
-      </nav>
+    <div ref={containerRef} className="flex flex-col justify-center items-center mt-5">
       {/* BOTTLE COMPONENTS */}
       <div className="absolute inset-0 top-40 z-50 -translate-y-36 lg:-translate-y-0">
         <motion.div
@@ -111,8 +89,8 @@ const Hero = () => {
           <div className="flex justify-evenly w-screen">
             <motion.div
               initial={{ opacity: 0, scale: 0, x: -220, y: 50 }}
-              animate={{ opacity: 1, scale: 1.2 }}
-              viewport={{ once: true, margin: '-100px' }}
+              whileInView={{ opacity: 1, scale: 1.2 }}
+              viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 3, delay: 1, ease: 'easeInOut' }}
               className="hidden lg:block mt-15"
             >
@@ -121,7 +99,7 @@ const Hero = () => {
             <motion.button
               className="bg-gradient-to-r from-[#00D1FF] to-[#1A83FF] text-white text-xl mt-8 px-10 py-2 rounded-3xl h-12"
               initial={{ opacity: 0, y: 65 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 2, delay: 2, ease: 'easeInOut' }}
             >
@@ -129,26 +107,13 @@ const Hero = () => {
             </motion.button>
             <motion.div
               initial={{ opacity: 0, scale: 0, x: 220, y: 50 }}
-              animate={{ opacity: 1, scale: 1.2 }}
-              viewport={{ once: true, margin: '-100px' }}
+              whileInView={{ opacity: 1, scale: 1.2 }}
+              viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 3, delay: 1, ease: 'easeInOut' }}
               className="hidden lg:block mt-15"
             >
               <Image src={RightBottle} alt="Botol Right" priority />
             </motion.div>
-          </div>
-        </div>
-      </div>
-      {/* BOTOL VARIETY SECTION */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-72 w-full">
-        <div className="bg-[#E6D4CB]">
-          <Image src={BottleHand} alt="BottleHand" className="w-full h-full" priority />
-        </div>
-        <div className="bg-[#20292C]">
-          <div className="flex flex-col justify-center items-center gap-4 lg:gap-14 h-screen">
-            {varieties.map((variety: string, index: number) => (
-              <Variety key={index} text={variety} icon={varietyIcons[index]} />
-            ))}
           </div>
         </div>
       </div>
