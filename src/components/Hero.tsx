@@ -9,16 +9,16 @@ import Variety from './ui/Variety'
 import Logo from '../../public/logo/logo_header.svg'
 import { BOTTLE_VARITIES, BUTTON, FRONT_SECTION, NAV_LINKS } from '@/config/constants'
 import CommonBtn from './ui/CommonBtn'
-import RightBotol from '../../public/botol/bottle_right.svg'
-import LeftBotol from '../../public/botol/bottle_left.svg'
+import RightBottle from '../../public/botol/bottle_right.svg'
+import LeftBottle from '../../public/botol/bottle_left.svg'
 import { motion, useScroll, useTransform } from 'motion/react'
-import BotolCap from '../../public/botol/Bottle-Cap.svg'
-import BotolContainer from '../../public/botol/Bottle-down.svg'
+import BottleCap from '../../public/botol/Bottle-Cap.svg'
+import BottleContainer from '../../public/botol/Bottle-down.svg'
 
 const Hero = () => {
   const { scrollYProgress } = useScroll({})
   const varieties: string[] = BOTTLE_VARITIES
-  const varieties_icon = [variety1, variety2, variety3, variety4]
+  const varietyIcons = [variety1, variety2, variety3, variety4]
   const bottleTopY = useTransform(scrollYProgress, [0, 0.185], [-50, 1100])
   const bottleBottomY = useTransform(scrollYProgress, [0, 0.185], [-350, 300])
 
@@ -52,7 +52,7 @@ const Hero = () => {
         >
           <motion.div className="bottle-top-scroll" style={{ y: bottleTopY }}>
             <Image
-              src={BotolCap}
+              src={BottleCap}
               alt="Botol Cap"
               className="m-auto scale-50 lg:scale-100"
               priority
@@ -67,7 +67,7 @@ const Hero = () => {
         >
           <motion.div className="bottle-bottom-scroll" style={{ y: bottleBottomY }}>
             <Image
-              src={BotolContainer}
+              src={BottleContainer}
               alt="Bottle Bottom"
               className="m-auto scale-50 lg:scale-100"
               priority
@@ -116,7 +116,7 @@ const Hero = () => {
               transition={{ duration: 3, delay: 1, ease: 'easeInOut' }}
               className="hidden lg:block mt-15"
             >
-              <Image src={LeftBotol} alt="Botol Left" priority />
+              <Image src={LeftBottle} alt="Botol Left" priority />
             </motion.div>
             <motion.button
               className="bg-gradient-to-r from-[#00D1FF] to-[#1A83FF] text-white text-xl mt-8 px-10 py-2 rounded-3xl h-12"
@@ -134,7 +134,7 @@ const Hero = () => {
               transition={{ duration: 3, delay: 1, ease: 'easeInOut' }}
               className="hidden lg:block mt-15"
             >
-              <Image src={RightBotol} alt="Botol Right" priority />
+              <Image src={RightBottle} alt="Botol Right" priority />
             </motion.div>
           </div>
         </div>
@@ -147,7 +147,7 @@ const Hero = () => {
         <div className="bg-[#20292C]">
           <div className="flex flex-col justify-center items-center gap-4 lg:gap-14 h-screen">
             {varieties.map((variety: string, index: number) => (
-              <Variety key={index} text={variety} icon={varieties_icon[index]} />
+              <Variety key={index} text={variety} icon={varietyIcons[index]} />
             ))}
           </div>
         </div>

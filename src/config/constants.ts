@@ -25,11 +25,11 @@ export const PREMIUMPRODUCTS = {
 }
 
 export const FOOTER = {
-  FOOT_LINK_A1: ['Shop', 'Contact Us', 'About', 'Journal', 'Custom'],
-  FOOT_LINK_A2: ["FAQ's", 'Returns', 'Ordering', 'Shipping', 'Personalization Policies'],
+  PRIMARY_LINKS: ['Shop', 'Contact Us', 'About', 'Journal', 'Custom'],
+  SECONDARY_LINKS: ["FAQ's", 'Returns', 'Ordering', 'Shipping', 'Personalization Policies'],
 }
 
-export const fAQDATA = [
+export const FAQDATA = [
   {
     question: 'Where can I watch?',
     answer:
@@ -54,8 +54,8 @@ export const fAQDATA = [
 
 export const CONTACTS = {
   TITLE: 'Get in touch with us',
-  DESCRIPTION_PT1: "Hi, I'm Amanda. Need help? Use the form below or email",
-  DESCRIPTION_PT2: 'me at hello@xyz.com',
+  DESCRIPTION_LINE_1: "Hi, I'm Amanda. Need help? Use the form below or email",
+  DESCRIPTION_LINE_2: 'me at hello@xyz.com',
   LABEL: {
     NAME: 'Name',
     EMAIL: 'Email',

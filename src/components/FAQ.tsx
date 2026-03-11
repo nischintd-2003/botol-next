@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import FAQItem from './ui/FAQItem'
-import { fAQDATA } from '@/config/constants'
+import { FAQDATA } from '@/config/constants'
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
@@ -14,7 +14,7 @@ const FAQ = () => {
   return (
     <div className="px-4 sm:px-8 md:px-20 py-10 md:py-20 bg-gray-100 mt-20">
       <div className="bg-white rounded-2xl mx-0 md:mx-20">
-        {fAQDATA.map((item, index) => (
+        {FAQDATA.map((item, index) => (
           <FAQItem
             key={index}
             index={index}

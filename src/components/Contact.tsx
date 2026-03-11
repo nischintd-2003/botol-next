@@ -24,7 +24,8 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className="pt-6 md:pt-10 text-white">
           <h1 className="text-2xl md:text-[40px] font-semibold leading-tight">{CONTACTS.TITLE}</h1>
           <h3 className="text-sm md:text-[14px] font-medium mt-3 mb-6 md:mb-10">
-            {CONTACTS.DESCRIPTION_PT1} <br className="hidden md:block" /> {CONTACTS.DESCRIPTION_PT2}
+            {CONTACTS.DESCRIPTION_LINE_1} <br className="hidden md:block" />{' '}
+            {CONTACTS.DESCRIPTION_LINE_2}
           </h3>
 
           <div className="flex flex-col md:me-40 gap-2">

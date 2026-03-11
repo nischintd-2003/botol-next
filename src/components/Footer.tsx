@@ -11,7 +11,7 @@ const Footer = () => {
             <Image src={Logo} alt="Logo" className="h-[50px] md:h-[60px] w-auto" />
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
-            {FOOTER.FOOT_LINK_A1.map((item: string) => (
+            {FOOTER.PRIMARY_LINKS.map((item: string) => (
               <button
                 key={item}
                 className="text-[16px] md:text-[20px] text-white hover:text-[#4DFBFB] transition"
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 text-center">
-            {FOOTER.FOOT_LINK_A2.map((item: string) => (
+            {FOOTER.SECONDARY_LINKS.map((item: string) => (
               <button
                 key={item}
                 className="text-[14px] md:text-[20px] text-white hover:text-[#4DFBFB] transition"
