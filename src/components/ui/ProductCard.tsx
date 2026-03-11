@@ -11,6 +11,7 @@ const ProductCard: FC<ProductProps> = ({ text, image }) => {
         src={image}
         alt={text}
         className="rounded-2xl w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />
       <p className="text-xl sm:text-2xl lg:text-3xl mt-[10px] mb-5">{text}</p>
       <CommonBtn text={BUTTON.LEARN_MORE} />

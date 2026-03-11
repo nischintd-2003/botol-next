@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div
       className="bg-cover bg-center grid grid-cols-1 lg:grid-cols-2 text-white gap-12 lg:gap-36 px-6 sm:px-12 lg:ps-50 lg:pe-30 py-12 lg:py-30 mt-20"
-      style={{ backgroundImage: `url(/aboutUsBg.svg)` }}
+      style={{ backgroundImage: `url(/aboutUsBg.webp)` }}
     >
       <div className="left">
         <h1 className="text-3xl sm:text-4xl lg:text-[60px] font-semibold">{ABOUTUS.TITLE}</h1>

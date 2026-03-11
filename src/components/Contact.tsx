@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import bottle from '../../public/BIG-BULL-1300-BLUE-BTL.svg'
+import bottle from '../../public/BIG-BULL-1300-BLUE-BTL.webp'
 import type { SubmitEventHandler } from 'react'
 import { BUTTON, CONTACTS } from '@/config/constants'
 
@@ -17,6 +17,7 @@ const Contact = () => {
           src={bottle}
           alt="bottle"
           className="h-auto md:h-190 w-60 md:w-auto -rotate-[-23.19deg] translate-y-10 md:translate-y-28 md:-translate-x-12"
+          sizes="(max-width: 768px) 15rem, 40vw"
         />
       </div>
 

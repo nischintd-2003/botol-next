@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Logo from '../../public/logo/logo_footer.svg'
+import Logo from '../../public/logo/logo_footer.webp'
 import { FOOTER, SOCIAL_ICONS_DATA } from '@/config/constants'
 
 const Footer = () => {
