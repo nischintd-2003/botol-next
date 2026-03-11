@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image'
 import bottle from '../../public/BIG-BULL-1300-BLUE-BTL.svg'
-import { SubmitEvent } from 'react'
+import type { SubmitEventHandler } from 'react'
 import { BUTTON, CONTACTS } from '@/config/constants'
 
 const Contact = () => {
-  const handleSubmit = (e: SubmitEvent) => {
+  const handleSubmit: SubmitEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
     console.log('Form Submitted.')
   }

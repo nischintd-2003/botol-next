@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="py-3 mr-15">
             {NAV_LINKS.map((item: string) => {
               return (
-                <button name="navlinks" id="navlinks" key={item} className="mx-8 text-[20px]">
+                <button key={item} className="mx-8 text-[20px]">
                   {item}
                 </button>
               )
