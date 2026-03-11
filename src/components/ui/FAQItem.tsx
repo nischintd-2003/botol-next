@@ -1,5 +1,6 @@
 'use client'
 import { FAQItemProps } from '@/interfaces/componentProps.interface'
+import { AnimatePresence, motion } from 'motion/react'
 import { type FC } from 'react'
 
 const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }) => {
@@ -53,11 +54,21 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
         </button>
       </div>
 
-      {isOpen && (
-        <div className="px-2 md:px-6 pb-6 text-gray-600">
-          <p className="pl-4 md:pl-32 text-base md:text-[20px]">{answer}</p>
-        </div>
-      )}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <div className="px-2 md:px-6 pb-6 text-gray-600">
+              <p className="pl-4 md:pl-32 text-base md:text-[20px]">{answer}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

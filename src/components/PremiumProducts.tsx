@@ -1,3 +1,5 @@
+'use client'
+
 import ProductCard from './ui/ProductCard'
 import RB600 from '../../public/botol-premium/rainbow600.svg'
 import RI650 from '../../public/botol-premium/rio650.svg'
@@ -5,8 +7,22 @@ import BB1300 from '../../public/botol-premium/bigBull1300.svg'
 import RM600 from '../../public/botol-premium/rome600.svg'
 import SW200 from '../../public/botol-premium/sweetie200.svg'
 import { StaticImageData } from 'next/image'
+import { motion, type Variants } from 'motion/react'
 import { BUTTON, PREMIUMPRODUCTS } from '@/config/constants'
 import CommonBtn from './ui/CommonBtn'
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+}
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+}
 
 const PremiumProducts = () => {
   const products: string[] = PREMIUMPRODUCTS.PRODUCTS
@@ -28,11 +44,19 @@ const PremiumProducts = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
         {products.map((product, index) => (
-          <ProductCard key={index} text={product} image={productImages[index]} />
+          <motion.div key={product + index} variants={itemVariants}>
+            <ProductCard text={product} image={productImages[index]} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
