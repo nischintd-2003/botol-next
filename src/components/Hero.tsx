@@ -6,22 +6,39 @@ import LeftBottle from '../../public/botol/bottle_left.webp'
 import { motion, useScroll, useTransform } from 'motion/react'
 import BottleCap from '../../public/botol/Bottle-Cap.webp'
 import BottleContainer from '../../public/botol/Bottle-down.webp'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Hero = () => {
   const containerRef = useRef(null)
+  const [vh, setVh] = useState(900)
+
+  useEffect(() => {
+    const updateVh = () => setVh(window.innerHeight)
+    updateVh()
+    window.addEventListener('resize', updateVh)
+    return () => window.removeEventListener('resize', updateVh)
+  }, [])
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start'],
   })
 
-  const bottleTopY = useTransform(scrollYProgress, [0, 1], [-50, 1100])
-  const bottleBottomY = useTransform(scrollYProgress, [0, 1], [-350, 300])
+  const bottleTopY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [Math.round(0.07 * vh), Math.round(1.36 * vh)]
+  )
+  const bottleBottomY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [Math.round(-0.256 * vh), Math.round(0.475 * vh)]
+  )
 
   return (
     <div ref={containerRef} className="flex flex-col justify-center items-center mt-5">
       {/* BOTTLE COMPONENTS */}
-      <div className="absolute inset-0 top-40 z-50 -translate-y-36 lg:-translate-y-0">
+      <div className="absolute inset-0 top-[5vh] lg:top-[5vh] z-50">
         <motion.div
           className="bottle-top-entrance"
           initial={{ y: 270 }}
