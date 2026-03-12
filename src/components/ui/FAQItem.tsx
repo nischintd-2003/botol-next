@@ -6,14 +6,19 @@ import { type FC } from 'react'
 const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }) => {
   return (
     <div>
-      <div
-        className={`flex flex-row items-start lg:items-center justify-between pt-6 pe-4 lg:pe-8 cursor-pointer ${
+      <button
+        className={`flex flex-row items-start lg:items-center justify-between w-full text-left pt-6 pe-4 lg:pe-8 cursor-pointer ${
           isOpen ? '' : 'pb-6'
         } ${index > 0 ? 'border-t-2 lg:border-t-6 border-gray-100' : ''}`}
         onClick={onToggle}
+        aria-expanded={isOpen}
+        aria-controls={`faq-answer-${index}`}
       >
         <div className="flex lg:items-center flex-row gap-2 lg:gap-4 w-full">
-          <span className="text-3xl lg:text-5xl font-bold px-2 lg:px-10 py-2 lg:py-7 text-gray-400">
+          <span
+            className="text-3xl lg:text-5xl font-bold px-2 lg:px-10 py-2 lg:py-7 text-gray-400"
+            aria-hidden="true"
+          >
             0{index + 1}
           </span>
           <span className="text-lg my-auto lg:my-0 lg:text-[32px] font-semibold text-gray-900 leading-snug lg:leading-normal">
@@ -21,11 +26,10 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
           </span>
         </div>
 
-        <button className="mt-2 lg:mt-0 text-gray-400 focus:outline-none self-end lg:self-auto">
+        <div className="mt-2 lg:mt-0 text-gray-400 self-end lg:self-auto" aria-hidden="true">
           {isOpen ? (
             <div className="p-2 lg:p-3 rounded-full bg-gradient-to-r from-brand-start to-brand-end text-white font-semibold">
               <svg
-                name="closeButton"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -39,7 +43,6 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
           ) : (
             <div className="p-2 lg:p-3 bg-gray-100 rounded-full text-black">
               <svg
-                name="open-button"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -51,12 +54,13 @@ const FAQItem: FC<FAQItemProps> = ({ index, question, answer, isOpen, onToggle }
               </svg>
             </div>
           )}
-        </button>
-      </div>
+        </div>
+      </button>
 
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
+            id={`faq-answer-${index}`}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

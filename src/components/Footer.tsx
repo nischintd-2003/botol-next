@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Logo from '../../public/logo/logo_footer.webp'
 import { FOOTER, SOCIAL_ICONS_DATA } from '@/config/constants'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -12,12 +13,13 @@ const Footer = () => {
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
             {FOOTER.PRIMARY_LINKS.map((item: string) => (
-              <button
+              <Link
+                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                 key={item}
                 className="text-[16px] md:text-[20px] text-white hover:text-accent-cyan transition"
               >
                 {item}
-              </button>
+              </Link>
             ))}
           </div>
         </div>
@@ -44,12 +46,13 @@ const Footer = () => {
 
           <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 text-center">
             {FOOTER.SECONDARY_LINKS.map((item: string) => (
-              <button
+              <Link
+                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                 key={item}
                 className="text-[14px] md:text-[20px] text-white hover:text-accent-cyan transition"
               >
                 {item}
-              </button>
+              </Link>
             ))}
           </div>
         </div>

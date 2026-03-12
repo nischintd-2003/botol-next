@@ -32,6 +32,7 @@ const Contact = () => {
           <div className="flex flex-col lg:me-40 gap-2">
             <label className="text-[14px] my-[5px]">{CONTACTS.LABEL.NAME}</label>
             <input
+              id="name"
               type="text"
               placeholder="Rachel Joe"
               className="px-[30px] py-[20px] rounded-[10px] bg-[#343333] border border-text-muted text-white placeholder:text-[12px] outline-none placeholder:text-text-muted"
@@ -39,6 +40,7 @@ const Contact = () => {
 
             <label className="text-[14px] my-[5px]">{CONTACTS.LABEL.EMAIL}</label>
             <input
+              id="email"
               type="email"
               placeholder="Rachel@domain.com"
               className="px-[30px] py-[20px] rounded-[10px] bg-[#343333] border border-text-muted text-white placeholder:text-[12px] outline-none placeholder:text-text-muted"
@@ -46,6 +48,7 @@ const Contact = () => {
 
             <label className="text-[14px] my-[5px]">{CONTACTS.LABEL.MESSAGE}</label>
             <textarea
+              id="message"
               placeholder="Type your query here....."
               rows={4}
               className="px-[30px] py-[20px] rounded-[10px] bg-[#343333] resize-none border border-text-muted text-white placeholder:text-[12px] outline-none placeholder:text-text-muted mb-4"

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Logo from '../../public/logo/logo_header.svg'
 import { BUTTON, NAV_LINKS } from '@/config/constants'
 import CommonBtn from './ui/CommonBtn'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
@@ -12,12 +13,13 @@ const Navbar = () => {
       <div className="right flex py-4 items-center">
         <div className="py-3 mr-15">
           {NAV_LINKS.map((item: string) => (
-            <button
+            <Link
+              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               key={item}
-              className="mx-8 text-[20px] hover:text-accent-cyan transition-colors"
+              className="mx-8 text-[20px] transition-colors"
             >
               {item}
-            </button>
+            </Link>
           ))}
         </div>
         <CommonBtn text={BUTTON.INQUIRY_NOW} />
