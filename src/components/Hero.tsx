@@ -15,20 +15,23 @@ const Hero = () => {
     offset: ['start start', 'end start'],
   })
 
-  const bottleTopY = useTransform(scrollYProgress, [0, 1], [-50, 1100])
-  const bottleBottomY = useTransform(scrollYProgress, [0, 1], [-350, 300])
+  const masterY = useTransform(scrollYProgress, [0, 1], ['-39vh', '35vh'])
+  const capLocalY = useTransform(scrollYProgress, [0, 1], ['300px', '800px'])
 
   return (
     <div ref={containerRef} className="flex flex-col justify-center items-center mt-5">
       {/* BOTTLE COMPONENTS */}
-      <div className="absolute inset-0 top-40 z-50 -translate-y-36 lg:-translate-y-0">
+      <motion.div
+        style={{ y: masterY }}
+        className="absolute inset-0 top-40 z-50 -translate-y-36 lg:-translate-y-0"
+      >
         <motion.div
           className="bottle-top-entrance"
           initial={{ y: 270 }}
           animate={{ y: 0 }}
           transition={{ duration: 2.5, delay: 1, ease: 'easeInOut' }}
         >
-          <motion.div className="bottle-top-scroll" style={{ y: bottleTopY }}>
+          <motion.div className="bottle-top-scroll" style={{ y: capLocalY }}>
             <Image
               src={BottleCap}
               alt="Botol Cap"
@@ -44,7 +47,7 @@ const Hero = () => {
           animate={{ y: 0 }}
           transition={{ duration: 2.5, delay: 1, ease: 'easeInOut' }}
         >
-          <motion.div className="bottle-bottom-scroll" style={{ y: bottleBottomY }}>
+          <motion.div className="bottle-bottom-scroll">
             <Image
               src={BottleContainer}
               alt="Bottle Bottom"
@@ -54,7 +57,7 @@ const Hero = () => {
             />
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
       {/* BACKGROUND HOLLOW CIRCLE EFFECT */}
       <motion.div
         className="circle bg-gradient-to-b from-accent-cyan to-accent-blue w-[90vw] max-w-[600px] aspect-square rounded-full p-[9px] absolute top-50"
