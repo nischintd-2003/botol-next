@@ -12,7 +12,10 @@ const Navbar = () => {
       <div className="right flex py-4 items-center">
         <div className="py-3 mr-15">
           {NAV_LINKS.map((item: string) => (
-            <button key={item} className="mx-8 text-[20px] hover:text-[#4DFBFB] transition-colors">
+            <button
+              key={item}
+              className="mx-8 text-[20px] hover:text-accent-cyan transition-colors"
+            >
               {item}
             </button>
           ))}

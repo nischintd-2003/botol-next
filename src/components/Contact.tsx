@@ -11,7 +11,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact grid grid-cols-1 md:grid-cols-[40%_60%] bg-gradient-to-r from-[rgba(32,31,31,0.8)] to-[#201F1F] overflow-hidden mt-20 mx-24 rounded-3xl">
+    <div className="grid grid-cols-1 md:grid-cols-[40%_60%] bg-gradient-to-r from-[rgba(32,31,31,0.8)] to-surface-dark overflow-hidden mt-20 mx-24 rounded-3xl">
       <div className="left flex justify-center md:block pt-10 md:pt-0">
         <Image
           src={bottle}
@@ -30,29 +30,29 @@ const Contact = () => {
           </h3>
 
           <div className="flex flex-col md:me-40 gap-2">
-            <label>{CONTACTS.LABEL.NAME}</label>
+            <label className="text-[14px] my-[5px]">{CONTACTS.LABEL.NAME}</label>
             <input
               type="text"
               placeholder="Rachel Joe"
-              className="px-3 py-2 rounded-md text-white placeholder:text-[12px] outline-none placeholder:text-[#8D8D8D]"
+              className="px-[30px] py-[20px] rounded-[10px] bg-[#343333] border border-text-muted text-white placeholder:text-[12px] outline-none placeholder:text-text-muted"
             />
 
             <label>{CONTACTS.LABEL.EMAIL}</label>
             <input
               type="email"
               placeholder="Rachel@domain.com"
-              className="px-3 py-2 rounded-md text-white placeholder:text-[12px] outline-none placeholder:text-[#8D8D8D]"
+              className="px-[30px] py-[20px] rounded-[10px] bg-[#343333] border border-text-muted text-white placeholder:text-[12px] outline-none placeholder:text-text-muted"
             />
 
             <label>{CONTACTS.LABEL.MESSAGE}</label>
             <textarea
               placeholder="Type your query here....."
               rows={4}
-              className="px-3 py-2 rounded-md text-white placeholder:text-[12px] outline-none resize-none placeholder:text-[#8D8D8D] mb-4"
+              className="px-[30px] py-[20px] rounded-[10px] bg-[#343333] resize-none border border-text-muted text-white placeholder:text-[12px] outline-none placeholder:text-text-muted mb-4"
             />
             <button
               type="submit"
-              className="bg-gradient-to-b w-32 md:w-40 from-[#00D1FF] to-[#1A83FF] px-2 py-2 rounded-full text-lg md:text-[20px] font-semibold text-white"
+              className="bg-gradient-to-b w-32 md:w-40 from-brand-start to-brand-end px-2 py-2 rounded-full text-lg md:text-[20px] font-semibold text-white"
             >
               {BUTTON.SUBMIT}
             </button>

@@ -10,7 +10,7 @@ const familjen = Familjen_Grotesk({
 
 export const metadata: Metadata = {
   title: 'Botol | The Ultimate Companion for Hydration',
-  description: 'We belive in the power of hydration',
+  description: 'We believe in the power of hydration',
 }
 
 export default function RootLayout({
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden">
-      <body className={`${familjen.className} antialiased overflow-x-hidden`}>{children}</body>
+    <html lang="en">
+      <body className={`${familjen.className} antialiased`}>{children}</body>
     </html>
   )
 }

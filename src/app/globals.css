@@ -1,23 +1,22 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-brand-start: #00d1ff;
+  --color-brand-end: #1a83ff;
+
+  --color-accent-cyan: #4dfbfb;
+  --color-accent-blue: #788eff;
+
+  --color-surface-dark: #201f1f;
+  --color-surface-dark-alt: #20292c;
+
+  --color-text-muted: #8d8d8d;
+}
+
 body {
   background-color: #ffffff;
-  overflow-x: hidden;
 }
 
 button:hover {
   cursor: pointer;
-}
-
-.contact input,
-.contact textarea {
-  padding: 20px 30px;
-  border-radius: 10px;
-  background-color: #343333;
-  border: 1px solid #8d8d8d;
-}
-
-.contact label {
-  font-size: 14px;
-  margin: 5px 0px;
 }

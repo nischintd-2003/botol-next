@@ -5,7 +5,7 @@ import { FOOTER, SOCIAL_ICONS_DATA } from '@/config/constants'
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#201F1F] p-8 mt-20">
+      <div className="bg-surface-dark p-8 mt-20">
         <div className="flex flex-col md:flex-row justify-between w-full md:px-28 gap-6 md:gap-0">
           <div className="flex justify-center md:justify-start">
             <Image src={Logo} alt="Logo" className="h-[50px] md:h-[60px] w-auto" />
@@ -14,7 +14,7 @@ const Footer = () => {
             {FOOTER.PRIMARY_LINKS.map((item: string) => (
               <button
                 key={item}
-                className="text-[16px] md:text-[20px] text-white hover:text-[#4DFBFB] transition"
+                className="text-[16px] md:text-[20px] text-white hover:text-accent-cyan transition"
               >
                 {item}
               </button>
@@ -29,7 +29,7 @@ const Footer = () => {
                 key={social.name}
                 href="#"
                 aria-label={social.name}
-                className="w-9 h-9 text-white bg-[#535353] flex justify-center items-center rounded-full hover:bg-[#4DFBFB] transition hover:text-[#201F1F]"
+                className="w-9 h-9 text-white bg-[#535353] flex justify-center items-center rounded-full hover:bg-accent-cyan transition hover:text-surface-dark"
               >
                 <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4 md:w-5 md:h-5">
                   <path
@@ -46,7 +46,7 @@ const Footer = () => {
             {FOOTER.SECONDARY_LINKS.map((item: string) => (
               <button
                 key={item}
-                className="text-[14px] md:text-[20px] text-white hover:text-[#4DFBFB] transition"
+                className="text-[14px] md:text-[20px] text-white hover:text-accent-cyan transition"
               >
                 {item}
               </button>

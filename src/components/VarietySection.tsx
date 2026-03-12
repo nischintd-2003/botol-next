@@ -5,15 +5,18 @@ import variety2 from '../../public/botol-variety/v2.webp'
 import variety3 from '../../public/botol-variety/v3.webp'
 import variety4 from '../../public/botol-variety/v4.webp'
 import Variety from './ui/Variety'
-import { BOTTLE_VARITIES } from '@/config/constants'
+
+const VARIETY_LIST = [
+  { name: 'Vacuum Bottles', icon: variety1 },
+  { name: 'Fridge Bottles & Jugs', icon: variety2 },
+  { name: 'Borosilicate Bottles', icon: variety3 },
+  { name: 'Kettles', icon: variety4 },
+]
 
 const VarietySection = () => {
-  const varieties: string[] = BOTTLE_VARITIES
-  const varietyIcons = [variety1, variety2, variety3, variety4]
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 mt-72 w-full">
-      <div className="bg-[#E6D4CB]">
+      <div className="bg-surface-dark">
         <Image
           src={BottleHand}
           alt="BottleHand"
@@ -22,10 +25,10 @@ const VarietySection = () => {
           priority
         />
       </div>
-      <div className="bg-[#20292C]">
+      <div className="bg-surface-dark-alt">
         <div className="flex flex-col justify-center items-center gap-4 lg:gap-14 h-[80vh] lg:h-screen">
-          {varieties.map((variety: string, index: number) => (
-            <Variety key={variety} text={variety} icon={varietyIcons[index]} />
+          {VARIETY_LIST.map((variety) => (
+            <Variety key={variety.name} text={variety.name} icon={variety.icon} />
           ))}
         </div>
       </div>
