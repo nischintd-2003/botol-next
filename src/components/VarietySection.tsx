@@ -15,7 +15,7 @@ const VARIETY_LIST = [
 
 const VarietySection = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mt-72 w-full">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mt-32 lg:mt-72 w-full">
       <div className="bg-surface-dark">
         <Image
           src={BottleHand}

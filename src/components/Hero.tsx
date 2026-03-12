@@ -57,20 +57,20 @@ const Hero = () => {
       </div>
       {/* BACKGROUND HOLLOW CIRCLE EFFECT */}
       <motion.div
-        className="circle bg-gradient-to-b from-accent-cyan to-accent-blue h-[600px] w-[600px] rounded-full p-2 absolute top-50"
+        className="circle bg-gradient-to-b from-accent-cyan to-accent-blue w-[90vw] max-w-[600px] aspect-square rounded-full p-[9px] absolute top-50"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1.1 }}
         transition={{ delay: 1, duration: 2, ease: 'easeInOut' }}
       >
         <motion.div
-          className="bg-white rounded-full h-[582px]"
+          className="bg-white rounded-full w-full h-full"
           initial={{ scale: 0.98 }}
           animate={{ scale: 1 }}
           transition={{ delay: 1, duration: 2, ease: 'easeInOut' }}
         ></motion.div>
       </motion.div>
       {/* TITLE AND DESCRIPTION */}
-      <div className="mt-46 z-40">
+      <div className="mt-24 lg:mt-46 z-40">
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: -50, scale: 0 }}

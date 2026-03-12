@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="lg:h-[80px] flex justify-center lg:justify-between w-full lg:px-24">
       <div className="left">
-        <Image src={Logo} alt="Logo" className="my-5 w-auto h-auto" priority />
+        <Image src={Logo} alt="Logo" className="my-5 w-auto h-auto" priority sizes="150px" />
       </div>
       <div className="right flex py-4 items-center">
         <div className="py-3 mr-15">

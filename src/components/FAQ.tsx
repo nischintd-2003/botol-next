@@ -12,7 +12,7 @@ const FAQ = () => {
   }
 
   return (
-    <div className="px-4 sm:px-8 md:px-20 py-10 md:py-20 bg-gray-100 mt-20">
+    <div className="px-4 lg:px-20 py-10 lg:py-20 bg-gray-100 mt-20">
       <div className="bg-white rounded-2xl mx-0 md:mx-20">
         {FAQDATA.map((item, index) => (
           <FAQItem

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="bg-surface-dark p-8 mt-20">
         <div className="flex flex-col md:flex-row justify-between w-full md:px-28 gap-6 md:gap-0">
           <div className="flex justify-center md:justify-start">
-            <Image src={Logo} alt="Logo" className="h-[50px] md:h-[60px] w-auto" />
+            <Image src={Logo} alt="Logo" className="h-[50px] md:h-[60px] w-auto" sizes="150px" />
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
             {FOOTER.PRIMARY_LINKS.map((item: string) => (

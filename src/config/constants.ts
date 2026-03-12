@@ -62,13 +62,6 @@ export const CONTACTS = {
   },
 }
 
-export const BOTTLE_VARITIES = [
-  'Vacuum Bottles',
-  'Fridge Bottles & Jugs',
-  'Borosilicate Bottles',
-  'Kettles',
-]
-
 export const NAV_LINKS = ['Shop', 'Contact Us', 'About', 'Journal', 'Custom']
 
 export const FRONT_SECTION = {
