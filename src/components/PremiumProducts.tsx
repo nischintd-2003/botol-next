@@ -11,6 +11,15 @@ import { motion, type Variants } from 'motion/react'
 import { BUTTON, PREMIUMPRODUCTS } from '@/config/constants'
 import CommonBtn from './ui/CommonBtn'
 
+const PRODUCT_LIST = [
+  { name: 'Rainbow 600', image: RB600 },
+  { name: 'Rio 650', image: RI650 },
+  { name: 'Big Bull 1300', image: BB1300 },
+  { name: 'Rome 600', image: RM600 },
+  { name: 'Rainbow 600', image: RB600 },
+  { name: 'Sweetie 200', image: SW200 },
+]
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -25,9 +34,6 @@ const itemVariants: Variants = {
 }
 
 const PremiumProducts = () => {
-  const products: string[] = PREMIUMPRODUCTS.PRODUCTS
-  const productImages: StaticImageData[] = [RB600, RI650, BB1300, RM600, RB600, SW200]
-
   return (
     <div className="w-full px-6 sm:px-10 lg:px-50 py-6 mt-20">
       <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center gap-4 ">
@@ -51,9 +57,9 @@ const PremiumProducts = () => {
         whileInView="visible"
         viewport={{ once: true, margin: '-50px' }}
       >
-        {products.map((product, index) => (
-          <motion.div key={product + index} variants={itemVariants}>
-            <ProductCard text={product} image={productImages[index]} />
+        {PRODUCT_LIST.map((product, index) => (
+          <motion.div key={product.name + index} variants={itemVariants}>
+            <ProductCard text={product.name} image={product.image} />
           </motion.div>
         ))}
       </motion.div>

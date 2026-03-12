@@ -25,7 +25,7 @@ const VarietySection = () => {
       <div className="bg-[#20292C]">
         <div className="flex flex-col justify-center items-center gap-4 lg:gap-14 h-[80vh] lg:h-screen">
           {varieties.map((variety: string, index: number) => (
-            <Variety key={variety + index} text={variety} icon={varietyIcons[index]} />
+            <Variety key={variety} text={variety} icon={varietyIcons[index]} />
           ))}
         </div>
       </div>

@@ -16,7 +16,7 @@ const FAQ = () => {
       <div className="bg-white rounded-2xl mx-0 md:mx-20">
         {FAQDATA.map((item, index) => (
           <FAQItem
-            key={index}
+            key={`faq-item-${index}`}
             index={index}
             question={item.question}
             answer={item.answer}

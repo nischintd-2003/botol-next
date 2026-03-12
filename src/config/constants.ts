@@ -21,7 +21,6 @@ export const ABOUTUS = {
 export const PREMIUMPRODUCTS = {
   TITLE: 'Hydration Essentials',
   DESCRIPTION: 'Discover Our Range of Premium Water Bottles',
-  PRODUCTS: ['Rainbow 600', 'Rio 650', 'Big Bull 1300', 'Rome 600', 'Rainbow 600', 'Sweetie 200'],
 }
 
 export const FOOTER = {

@@ -21,7 +21,7 @@ const AboutUs = () => {
 
       <div className="right flex flex-col gap-6 sm:gap-8 lg:gap-10 ms-0 lg:ms-10 me-0 lg:me-60">
         {ABOUTUS.FEATURES.map((feature, index) => (
-          <BlurCard key={index} text={feature} number={index} />
+          <BlurCard key={feature} text={feature} number={index} />
         ))}
       </div>
     </div>
